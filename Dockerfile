@@ -27,3 +27,6 @@ EXPOSE 3000
 # Override the command: 
 # docker run $image $other_command
 CMD ["npm", "run", "start"]
+
+# By updating the CMD to "dev" instead of "start"
+# we can achieve continuous development using docker!

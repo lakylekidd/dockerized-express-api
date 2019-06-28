@@ -23,3 +23,7 @@ following command:
 
 * Or for live console outputs use
 `docker logs -f <CONTAINER>`
+
+### Running on different port
+If you want to run this image on a different port you need to use the following:
+`docker run --name <image_name> -p <local_port>:<container_port>`

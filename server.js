@@ -28,7 +28,7 @@ app.use(ExpressAPILogMiddleware(logger, { request: true }));
 // Setup initial root route
 app.get('/', (req, res) => {
     // Return 200
-    res.status(200).send('Api is running!');
+    res.status(200).send('Api is running!!!');
 })
 
 // Set up port
