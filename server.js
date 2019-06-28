@@ -19,3 +19,23 @@ const logger = log({
     file: false,
     label: config.name
 });
+
+// Setup server
+app.use(bodyParser.json());
+app.use(cors());
+app.use(ExpressAPILogMiddleware(logger, { request: true }));
+
+// Setup initial root route
+app.get('/', (req, res) => {
+    // Return 200
+    res.status(200).send('Api is running!');
+})
+
+// Set up port
+app.listen(config.port, config.host, (e) => {
+    if (e) {
+        throw new Error('Internal Server Error');
+    }
+    // Log server is running
+    logger.info(`${config.name} running on ${config.host}:${config.port}`);
+})
