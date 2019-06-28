@@ -51,3 +51,6 @@ If you don’t include a run section, Heroku uses the CMD specified in the Docke
 `heroku stack:set container`
 
 6. Push your app to Heroku: `git push heroku master`
+Your application will be built, and Heroku will use the run command provided in heroku.yml instead of your Procfile.
+
+Note: The port is set dynamically by heroku, so you need to user `process.env.PORT` variable on your server to make it work in docker as well.
