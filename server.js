@@ -1,6 +1,6 @@
 // Use local env secret variables
 require('dotenv').config();
-const express = requie('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { log, ExpressAPILogMiddleware } = require('@rama41222/node-logger');
